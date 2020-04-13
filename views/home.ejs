@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") -%>
+<h1>Hello</h1>
+<p><%= homeContent %></p>
+<% let i = 0; %>
+<% posts.forEach(function(post){ %>
+  <h1><%= post.title %></h1>
+  <p><%= post.excerpt %></p>
+  <% let ref = "/posts/"+post.link; %>
+  <% console.log(ref); %>
+  <a href= <%= ref %> >Read More</a>
+<% }); %>
+<%- include("partials/footer.ejs") -%>
